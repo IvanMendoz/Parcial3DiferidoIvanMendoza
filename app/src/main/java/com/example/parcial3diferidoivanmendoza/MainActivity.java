@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import com.example.parcial3diferidoivanmendoza.Clases.FragmentoCarrosClientes;
 import com.example.parcial3diferidoivanmendoza.Clases.FragmentoClientes;
 import com.example.parcial3diferidoivanmendoza.Clases.FragmentoVehiculos;
+import com.example.parcial3diferidoivanmendoza.Clases.Fragmento_Informacion;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnNavigator = findViewById( R.id.btnNav );
         btnNavigator.setOnNavigationItemSelectedListener( ( BottomNavigationView.OnNavigationItemSelectedListener ) navListener );
-        selectFragment = new FragmentoClientes();
+        selectFragment = new Fragmento_Informacion();
         getSupportFragmentManager().beginTransaction().replace( R.id.FragmentContent, selectFragment ).commit();
     }
 
@@ -35,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
             Fragment selectFragment = null;
 
             switch ( item.getItemId() ){
+                case R.id.nav_info:
+                    selectFragment =new Fragmento_Informacion();
+                    break;
+
                 case R.id.nav_person:
                     selectFragment =new FragmentoClientes();
                     break;
