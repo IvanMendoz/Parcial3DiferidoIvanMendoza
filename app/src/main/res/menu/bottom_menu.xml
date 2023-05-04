@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_person"
+        android:icon="@drawable/baseline_person_add"
+        android:title="Clientes">
+    </item>
+    <item android:id="@+id/nav_car"
+        android:icon="@drawable/baseline_directions_car"
+        android:title="Vehiculos">
+    </item>
+    <item android:id="@+id/nav_carPerson"
+        android:icon="@drawable/baseline_car_rental"
+        android:title="Carros en renta">
+    </item>
+</menu>
